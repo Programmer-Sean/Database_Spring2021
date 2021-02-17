@@ -1,0 +1,13 @@
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form2.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form3.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form4.resources
