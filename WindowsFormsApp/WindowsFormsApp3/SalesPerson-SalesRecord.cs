@@ -10,27 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form5 : Form
+    public partial class Form3 : Form
     {
-        public Form5()
+        public Form3()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            new Form6().Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            new Form4().Show();
+            new SalesPersonMain().Show();
             this.Hide();
         }
     }

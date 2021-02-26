@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form4 : Form
+    public partial class SalesPersonMain : Form
     {
-        public Form4()
+        public SalesPersonMain()
         {
             InitializeComponent();
         }
@@ -37,7 +37,7 @@ namespace WindowsFormsApp3
 
         private void Back_Click(object sender, EventArgs e)
         {
-            new Form5().Show();
+            new MainMenu().Show();
             this.Hide();
         }
     }

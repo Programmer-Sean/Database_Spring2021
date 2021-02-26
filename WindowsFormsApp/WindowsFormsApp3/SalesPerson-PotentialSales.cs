@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form7 : Form
+    public partial class Form2 : Form
     {
-        public Form7()
+        public Form2()
         {
             InitializeComponent();
         }
 
-        private void BackBtn_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-            new Form6().Show();
+            new SalesPersonMain().Show();
             this.Hide();
         }
     }

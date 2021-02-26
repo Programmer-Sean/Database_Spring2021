@@ -18,12 +18,12 @@ C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\W
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form2.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form3.resources
-C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form4.resources
-C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form5.resources
-C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form6.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form7.resources
+C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesPersonMain.resources
+C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.MainMenu.resources
+C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CustomerMain.resources

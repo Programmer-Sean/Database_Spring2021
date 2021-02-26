@@ -28,57 +28,58 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.removeBtn = new System.Windows.Forms.Button();
+            this.dealerTxtBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.modelTxtBox = new System.Windows.Forms.ComboBox();
+            this.makeTxtBox = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.yearBox = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.colorTxtBox = new System.Windows.Forms.TextBox();
             this.Cars = new System.Windows.Forms.ListBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.editBtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.customerTxtBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.salespersonTxtBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.selectBtn = new System.Windows.Forms.Button();
+            this.priceTxtBox = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearBox)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // addBtn
             // 
-            this.button1.Location = new System.Drawing.Point(699, 71);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addBtn.Location = new System.Drawing.Point(699, 71);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(75, 23);
+            this.addBtn.TabIndex = 0;
+            this.addBtn.Text = "Add";
+            this.addBtn.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // removeBtn
             // 
-            this.button2.Location = new System.Drawing.Point(373, 123);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Remove";
-            this.button2.UseVisualStyleBackColor = true;
+            this.removeBtn.Location = new System.Drawing.Point(373, 123);
+            this.removeBtn.Name = "removeBtn";
+            this.removeBtn.Size = new System.Drawing.Size(75, 23);
+            this.removeBtn.TabIndex = 1;
+            this.removeBtn.Text = "Remove";
+            this.removeBtn.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // dealerTxtBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(138, 24);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.dealerTxtBox.FormattingEnabled = true;
+            this.dealerTxtBox.Location = new System.Drawing.Point(138, 24);
+            this.dealerTxtBox.Name = "dealerTxtBox";
+            this.dealerTxtBox.Size = new System.Drawing.Size(121, 21);
+            this.dealerTxtBox.TabIndex = 2;
+            this.dealerTxtBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -90,21 +91,21 @@
             this.label1.Text = "Dealership";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // comboBox3
+            // modelTxtBox
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(307, 73);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(146, 21);
-            this.comboBox3.TabIndex = 6;
+            this.modelTxtBox.FormattingEnabled = true;
+            this.modelTxtBox.Location = new System.Drawing.Point(307, 73);
+            this.modelTxtBox.Name = "modelTxtBox";
+            this.modelTxtBox.Size = new System.Drawing.Size(146, 21);
+            this.modelTxtBox.TabIndex = 6;
             // 
-            // comboBox4
+            // makeTxtBox
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(138, 72);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 21);
-            this.comboBox4.TabIndex = 7;
+            this.makeTxtBox.FormattingEnabled = true;
+            this.makeTxtBox.Location = new System.Drawing.Point(138, 72);
+            this.makeTxtBox.Name = "makeTxtBox";
+            this.makeTxtBox.Size = new System.Drawing.Size(121, 21);
+            this.makeTxtBox.TabIndex = 7;
             // 
             // label3
             // 
@@ -133,23 +134,23 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Year";
             // 
-            // numericUpDown1
+            // yearBox
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(494, 72);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.yearBox.Location = new System.Drawing.Point(494, 72);
+            this.yearBox.Maximum = new decimal(new int[] {
             2021,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(46, 20);
-            this.numericUpDown1.TabIndex = 12;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.yearBox.Name = "yearBox";
+            this.yearBox.Size = new System.Drawing.Size(46, 20);
+            this.yearBox.TabIndex = 12;
+            this.yearBox.Value = new decimal(new int[] {
             1999,
             0,
             0,
             0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.yearBox.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label6
             // 
@@ -160,12 +161,12 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Color";
             // 
-            // textBox1
+            // colorTxtBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(583, 73);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(110, 20);
-            this.textBox1.TabIndex = 14;
+            this.colorTxtBox.Location = new System.Drawing.Point(583, 73);
+            this.colorTxtBox.Name = "colorTxtBox";
+            this.colorTxtBox.Size = new System.Drawing.Size(110, 20);
+            this.colorTxtBox.TabIndex = 14;
             // 
             // Cars
             // 
@@ -185,14 +186,14 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // editBtn
             // 
-            this.button4.Location = new System.Drawing.Point(373, 152);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "Edit";
-            this.button4.UseVisualStyleBackColor = true;
+            this.editBtn.Location = new System.Drawing.Point(373, 152);
+            this.editBtn.Name = "editBtn";
+            this.editBtn.Size = new System.Drawing.Size(75, 23);
+            this.editBtn.TabIndex = 17;
+            this.editBtn.Text = "Edit";
+            this.editBtn.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -202,13 +203,14 @@
             this.button5.TabIndex = 18;
             this.button5.Text = "Buy";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // textBox2
+            // customerTxtBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(614, 155);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(160, 20);
-            this.textBox2.TabIndex = 19;
+            this.customerTxtBox.Location = new System.Drawing.Point(614, 155);
+            this.customerTxtBox.Name = "customerTxtBox";
+            this.customerTxtBox.Size = new System.Drawing.Size(160, 20);
+            this.customerTxtBox.TabIndex = 19;
             // 
             // label2
             // 
@@ -219,13 +221,13 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Customer Name";
             // 
-            // comboBox2
+            // salespersonTxtBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(614, 125);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(160, 21);
-            this.comboBox2.TabIndex = 21;
+            this.salespersonTxtBox.FormattingEnabled = true;
+            this.salespersonTxtBox.Location = new System.Drawing.Point(614, 125);
+            this.salespersonTxtBox.Name = "salespersonTxtBox";
+            this.salespersonTxtBox.Size = new System.Drawing.Size(160, 21);
+            this.salespersonTxtBox.TabIndex = 21;
             // 
             // label7
             // 
@@ -236,21 +238,21 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Salesperson";
             // 
-            // button6
+            // selectBtn
             // 
-            this.button6.Location = new System.Drawing.Point(373, 181);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 23;
-            this.button6.Text = "Select";
-            this.button6.UseVisualStyleBackColor = true;
+            this.selectBtn.Location = new System.Drawing.Point(373, 181);
+            this.selectBtn.Name = "selectBtn";
+            this.selectBtn.Size = new System.Drawing.Size(75, 23);
+            this.selectBtn.TabIndex = 23;
+            this.selectBtn.Text = "Select";
+            this.selectBtn.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // priceTxtBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(614, 184);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(160, 20);
-            this.textBox3.TabIndex = 24;
+            this.priceTxtBox.Location = new System.Drawing.Point(614, 184);
+            this.priceTxtBox.Name = "priceTxtBox";
+            this.priceTxtBox.Size = new System.Drawing.Size(160, 20);
+            this.priceTxtBox.TabIndex = 24;
             // 
             // label8
             // 
@@ -267,31 +269,31 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.button6);
+            this.Controls.Add(this.priceTxtBox);
+            this.Controls.Add(this.selectBtn);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.salespersonTxtBox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.customerTxtBox);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.editBtn);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Cars);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.colorTxtBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.yearBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.makeTxtBox);
+            this.Controls.Add(this.modelTxtBox);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dealerTxtBox);
+            this.Controls.Add(this.removeBtn);
+            this.Controls.Add(this.addBtn);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.yearBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -299,28 +301,28 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button addBtn;
+        private System.Windows.Forms.Button removeBtn;
+        private System.Windows.Forms.ComboBox dealerTxtBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox modelTxtBox;
+        private System.Windows.Forms.ComboBox makeTxtBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown yearBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox colorTxtBox;
         private System.Windows.Forms.ListBox Cars;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox customerTxtBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox salespersonTxtBox;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button selectBtn;
+        private System.Windows.Forms.TextBox priceTxtBox;
         private System.Windows.Forms.Label label8;
     }
 }

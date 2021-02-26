@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form6 : Form
+    public partial class CustomerMain : Form
     {
-        public Form6()
+        public CustomerMain()
         {
             InitializeComponent();
         }
@@ -25,8 +25,28 @@ namespace WindowsFormsApp3
 
         private void button6_Click(object sender, EventArgs e)
         {
-            new Form5().Show();
+            new MainMenu().Show();
             this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
