@@ -34,5 +34,11 @@ namespace WindowsFormsApp3
             new Form2().Show();
             this.Hide();
         }
+
+        private void Back_Click(object sender, EventArgs e)
+        {
+            new Form5().Show();
+            this.Hide();
+        }
     }
 }

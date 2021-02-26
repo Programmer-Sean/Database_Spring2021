@@ -10,27 +10,23 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form1 : Form
+    public partial class Form6 : Form
     {
-        public Form1()
+        public Form6()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            new Form4().Show();
+            new Form7().Show();
             this.Hide();
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-
+            new Form5().Show();
+            this.Hide();
         }
     }
 }

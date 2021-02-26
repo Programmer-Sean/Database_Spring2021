@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
-    public partial class Form1 : Form
+    public partial class Form5 : Form
     {
-        public Form1()
+        public Form5()
         {
             InitializeComponent();
         }
@@ -22,15 +22,16 @@ namespace WindowsFormsApp3
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            new Form4().Show();
+            new Form6().Show();
             this.Hide();
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
-
+            new Form4().Show();
+            this.Hide();
         }
     }
 }
