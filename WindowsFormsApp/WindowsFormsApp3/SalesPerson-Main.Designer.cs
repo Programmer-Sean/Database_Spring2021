@@ -33,6 +33,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
+            this.addLot = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -85,17 +86,28 @@
             this.Back.UseVisualStyleBackColor = true;
             this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
-            // Form4
+            // addLot
+            // 
+            this.addLot.Location = new System.Drawing.Point(585, 208);
+            this.addLot.Name = "addLot";
+            this.addLot.Size = new System.Drawing.Size(180, 83);
+            this.addLot.TabIndex = 5;
+            this.addLot.Text = "Add Lot";
+            this.addLot.UseVisualStyleBackColor = true;
+            this.addLot.Click += new System.EventHandler(this.addLot_Click);
+            // 
+            // SalesPersonMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.addLot);
             this.Controls.Add(this.Back);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form4";
+            this.Name = "SalesPersonMain";
             this.Text = "Form4";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -109,5 +121,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Back;
+        private System.Windows.Forms.Button addLot;
     }
 }

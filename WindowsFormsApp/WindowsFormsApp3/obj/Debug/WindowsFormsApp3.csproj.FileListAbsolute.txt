@@ -10,7 +10,6 @@ C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsForms
 C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form2.resources
 C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form3.resources
-C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form4.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
@@ -27,3 +26,8 @@ C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\W
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesPersonMain.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.MainMenu.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CustomerMain.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesPersonMain.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.MainMenu.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.CustomerMain.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form7.resources
+C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesPersonAddLot.resources

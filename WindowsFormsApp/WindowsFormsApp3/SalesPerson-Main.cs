@@ -40,5 +40,11 @@ namespace WindowsFormsApp3
             new MainMenu().Show();
             this.Hide();
         }
+
+        private void addLot_Click(object sender, EventArgs e)
+        {
+            new SalesPersonAddLot().Show();
+            this.Hide();
+        }
     }
 }
