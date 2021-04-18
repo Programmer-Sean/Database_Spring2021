@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="SalesPerons-CarTools.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesPerons-CarTools.Designer.cs">
+      <DependentUpon>SalesPerons-CarTools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesPerson-Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesPerson-Login.Designer.cs">
+      <DependentUpon>SalesPerson-Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesPerson-BuyCar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,8 +108,14 @@
     <Compile Include="SalesPersonAddLot.Designer.cs">
       <DependentUpon>SalesPersonAddLot.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SalesPerons-CarTools.resx">
+      <DependentUpon>SalesPerons-CarTools.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SalesPerson-BuyCar.resx">
       <DependentUpon>SalesPerson-BuyCar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesPerson-Login.resx">
+      <DependentUpon>SalesPerson-Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesPerson-PotentialSales.resx">
       <DependentUpon>SalesPerson-PotentialSales.cs</DependentUpon>

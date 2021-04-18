@@ -30,7 +30,7 @@ namespace WindowsFormsApp3
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new SalesPersonMain().Show();
+            new SalesLogin().Show();
             this.Hide();
         }
     }

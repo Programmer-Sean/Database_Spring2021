@@ -12,9 +12,12 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp3
 {
+    
+
     public partial class SalesPersonAddLot : Form
     {
-        string connectionString = @"Data Source=DESKTOP-0T7V9M3\SQLEXPRESS; Initial Catalog = Car Dealership; Integrated Security = True; ";
+
+        string connectionString = @"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS; Initial Catalog = Car Dealership; Integrated Security = True; ";
         SqlCommand cmd;
         SqlConnection con;
         SqlDataAdapter da;
@@ -55,11 +58,15 @@ namespace WindowsFormsApp3
 
         private void InsertLot_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-0T7V9M3\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             con.Open();
             cmd = new SqlCommand("insert into LotID([Lot Name],[Lot Number],[Lot Street Name],City) values ('" + txtName.Text + "','" + numBox.Text + "','" + txtStName.Text + "','" + txtCityName.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
+
+            
+            //Update the list view
+            ViewLots_Click(sender, e);
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
