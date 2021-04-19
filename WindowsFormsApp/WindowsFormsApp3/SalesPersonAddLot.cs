@@ -17,7 +17,7 @@ namespace WindowsFormsApp3
     public partial class SalesPersonAddLot : Form
     {
 
-        string connectionString = @"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS; Initial Catalog = Car Dealership; Integrated Security = True; ";
+        string connectionString = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True";
         SqlCommand cmd;
         SqlConnection con;
         SqlDataAdapter da;
@@ -58,7 +58,7 @@ namespace WindowsFormsApp3
 
         private void InsertLot_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            con = new SqlConnection(connectionString);
             con.Open();
             cmd = new SqlCommand("insert into LotID([Lot Name],[Lot Number],[Lot Street Name],City) values ('" + txtName.Text + "','" + numBox.Text + "','" + txtStName.Text + "','" + txtCityName.Text + "')", con);
             cmd.ExecuteNonQuery();

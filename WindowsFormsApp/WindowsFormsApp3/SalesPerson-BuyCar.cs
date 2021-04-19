@@ -24,7 +24,7 @@ namespace WindowsFormsApp3
 
 
             string Sql = "SELECT [Lot ID] from LotID";
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand(Sql, conn);
             SqlDataReader DR = cmd.ExecuteReader();
@@ -43,14 +43,17 @@ namespace WindowsFormsApp3
 
             //Getting list of models for combobox
             Sql = "SELECT [Make] from MakeModelID";
-            conn = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             conn.Open();
             cmd = new SqlCommand(Sql, conn);
             DR = cmd.ExecuteReader();
 
             while (DR.Read())
             {
-                makeTxtBox.Items.Add(DR[0]);
+                if (!makeTxtBox.Items.Contains(DR[0]))
+                {
+                    makeTxtBox.Items.Add(DR[0]);
+                }
             }
 
 
@@ -60,7 +63,7 @@ namespace WindowsFormsApp3
 
             //Getting list of Colors for combobox
             Sql = "SELECT [Color] from ColorID";
-            conn = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            conn = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             conn.Open();
             cmd = new SqlCommand(Sql, conn);
             DR = cmd.ExecuteReader();
@@ -129,7 +132,7 @@ namespace WindowsFormsApp3
         private void addBtn_Click(object sender, EventArgs e)
         {
             //;ColorComboBox`
-            con = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             con.Open();
 
             //cmd = new SqlCommand("insert into CarID(MakeModelID,[VIN Number], [Color ID], Mileage, Price, Picture) VALUES ('" + MakeTB.Text + "','" + ModelTB.Text + "')", con);
@@ -176,7 +179,7 @@ namespace WindowsFormsApp3
 
 
             string Sql = "SELECT Model FROM MakeModelID WHERE([Make] = '"+makeTxtBox.Text+"')";
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             conn.Open();
             SqlCommand cmd = new SqlCommand(Sql, conn);
             SqlDataReader DR = cmd.ExecuteReader();

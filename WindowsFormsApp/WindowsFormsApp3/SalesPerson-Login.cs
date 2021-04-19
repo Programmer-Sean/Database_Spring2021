@@ -19,7 +19,7 @@ namespace WindowsFormsApp3
     public partial class SalesLogin : Form
     {
 
-        string connectionString = @"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS; Initial Catalog = Car Dealership; Integrated Security = True; ";
+        //string connectionString = "";// @"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
         SqlCommand cmd;
         SqlConnection con;
         SqlDataAdapter da;
@@ -62,7 +62,7 @@ namespace WindowsFormsApp3
 
             if (newUser)
             {
-                con = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+                con = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
                 con.Open();
                 //cmd = new SqlCommand("insert into SalesPersonID([First Name],[Last Name],UserName,Password) values ('" + FirstNameTB.Text + "','" + LastNameTB.Text + "','" + UserNameTB.Text + "','" + PasswordTB.Text + "')", con);
 
@@ -78,7 +78,7 @@ namespace WindowsFormsApp3
 
             //Login, check login and password
             EnPW = Encrypt.EncryptString(PasswordTB.Text, "Password");
-            con = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            con = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             con.Open();
             //cmd = new SqlCommand("SELECT CASE WHEN EXISTS   ( SELECT * FROM SalesPersonID WHERE ([First Name] = 'Sean') AND ([Last Name] = 'Sean')  ) THEN 'TRUE'  ELSE 'FALSE' END", con);
             cmd = new SqlCommand("SELECT CASE WHEN EXISTS   ( SELECT * FROM SalesPersonID WHERE ([Username] = '"+UserNameTB.Text+"') AND ([Password] = '"+ EnPW +"')  ) THEN 'TRUE'  ELSE 'FALSE' END", con);
