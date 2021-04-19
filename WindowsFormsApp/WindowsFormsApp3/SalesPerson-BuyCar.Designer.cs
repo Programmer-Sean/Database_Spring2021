@@ -70,6 +70,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // dsa
+            // 
+            dsa.AutoEllipsis = true;
+            dsa.AutoSize = true;
+            dsa.Location = new System.Drawing.Point(472, 126);
+            dsa.Name = "dsa";
+            dsa.Size = new System.Drawing.Size(63, 13);
+            dsa.TabIndex = 34;
+            dsa.Text = "Picture Link";
+            // 
+            // label11
+            // 
+            label11.AutoEllipsis = true;
+            label11.AutoSize = true;
+            label11.Location = new System.Drawing.Point(491, 162);
+            label11.Name = "label11";
+            label11.Size = new System.Drawing.Size(28, 13);
+            label11.TabIndex = 36;
+            label11.Text = "VIN ";
+            // 
             // addBtn
             // 
             this.addBtn.Location = new System.Drawing.Point(699, 66);
@@ -240,6 +260,7 @@
             this.label7.Size = new System.Drawing.Size(65, 13);
             this.label7.TabIndex = 22;
             this.label7.Text = "Salesperson";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // selectBtn
             // 
@@ -336,32 +357,12 @@
             this.PictureTB.Size = new System.Drawing.Size(146, 20);
             this.PictureTB.TabIndex = 33;
             // 
-            // dsa
-            // 
-            dsa.AutoEllipsis = true;
-            dsa.AutoSize = true;
-            dsa.Location = new System.Drawing.Point(472, 126);
-            dsa.Name = "dsa";
-            dsa.Size = new System.Drawing.Size(63, 13);
-            dsa.TabIndex = 34;
-            dsa.Text = "Picture Link";
-            // 
             // VinTB
             // 
             this.VinTB.Location = new System.Drawing.Point(547, 155);
             this.VinTB.Name = "VinTB";
             this.VinTB.Size = new System.Drawing.Size(146, 20);
             this.VinTB.TabIndex = 35;
-            // 
-            // label11
-            // 
-            label11.AutoEllipsis = true;
-            label11.AutoSize = true;
-            label11.Location = new System.Drawing.Point(491, 162);
-            label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(28, 13);
-            label11.TabIndex = 36;
-            label11.Text = "VIN ";
             // 
             // LotIDBtn
             // 

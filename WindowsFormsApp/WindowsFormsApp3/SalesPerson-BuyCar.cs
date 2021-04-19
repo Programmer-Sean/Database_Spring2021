@@ -136,13 +136,13 @@ namespace WindowsFormsApp3
 
             cmd = new SqlCommand ("Select [Make Model ID] FROM MakeModelID WHERE ([Make] = '" + makeTxtBox.Text + "') AND ([Model] = '" + modelTxtBox.Text + "')", con);
             int temp = (int)cmd.ExecuteScalar();
-            label2.Text = temp + "";
+            //label2.Text = temp + "";
 
             ///Getting ColorID
             cmd = new SqlCommand("Select [Color ID] FROM ColorID WHERE ([Color] = '" + ColorComboBox.Text + "')", con);
             int temp2 = (int)cmd.ExecuteScalar();
 
-            label1.Text = temp2+"";
+            //label1.Text = temp2+"";
 
             cmd = new SqlCommand("insert into CarID([Make Model ID],[VIN Number], [Color ID], Mileage, Price, Picture) VALUES ('" + temp + "','" + VinTB.Text + "' ,'" + temp2 + "','" + MileageTB.Text + "','" + PriceTB.Text + "','" + PictureTB.Text + "')", con);
             cmd.ExecuteNonQuery();
@@ -227,6 +227,11 @@ namespace WindowsFormsApp3
             sqlDa.Fill(dtbl);
 
             dataGridView1.DataSource = dtbl;
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
