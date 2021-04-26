@@ -24,7 +24,7 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new CustomerMain().Show();
+            new Customer_Login().Show();
             this.Hide();
         }
 

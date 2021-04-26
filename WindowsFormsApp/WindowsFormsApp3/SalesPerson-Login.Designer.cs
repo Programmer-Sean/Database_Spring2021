@@ -71,6 +71,7 @@ namespace WindowsFormsApp3
             this.UserNameTB.Name = "UserNameTB";
             this.UserNameTB.Size = new System.Drawing.Size(241, 20);
             this.UserNameTB.TabIndex = 2;
+            this.UserNameTB.TextChanged += new System.EventHandler(this.UserNameTB_TextChanged);
             // 
             // PasswordTB
             // 
@@ -78,6 +79,7 @@ namespace WindowsFormsApp3
             this.PasswordTB.Name = "PasswordTB";
             this.PasswordTB.Size = new System.Drawing.Size(241, 20);
             this.PasswordTB.TabIndex = 3;
+            this.PasswordTB.TextChanged += new System.EventHandler(this.PasswordTB_TextChanged);
             // 
             // button3
             // 
@@ -110,6 +112,7 @@ namespace WindowsFormsApp3
             this.label2.Size = new System.Drawing.Size(108, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Username:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -120,6 +123,7 @@ namespace WindowsFormsApp3
             this.label3.Size = new System.Drawing.Size(104, 25);
             this.label3.TabIndex = 7;
             this.label3.Text = "Password:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -141,6 +145,7 @@ namespace WindowsFormsApp3
             this.label5.Size = new System.Drawing.Size(112, 25);
             this.label5.TabIndex = 9;
             this.label5.Text = "Last Name:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FirstNameTB
             // 
@@ -148,6 +153,7 @@ namespace WindowsFormsApp3
             this.FirstNameTB.Name = "FirstNameTB";
             this.FirstNameTB.Size = new System.Drawing.Size(241, 20);
             this.FirstNameTB.TabIndex = 10;
+            this.FirstNameTB.TextChanged += new System.EventHandler(this.FirstNameTB_TextChanged);
             // 
             // LastNameTB
             // 
@@ -155,6 +161,7 @@ namespace WindowsFormsApp3
             this.LastNameTB.Name = "LastNameTB";
             this.LastNameTB.Size = new System.Drawing.Size(241, 20);
             this.LastNameTB.TabIndex = 11;
+            this.LastNameTB.TextChanged += new System.EventHandler(this.LastNameTB_TextChanged);
             // 
             // SalesLogin
             // 

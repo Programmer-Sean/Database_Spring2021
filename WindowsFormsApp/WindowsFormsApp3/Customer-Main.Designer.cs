@@ -43,21 +43,20 @@ namespace WindowsFormsApp3
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.purchasehistoryBtn = new System.Windows.Forms.Button();
             this.searchBtn = new System.Windows.Forms.Button();
             this.favouriteBtn = new System.Windows.Forms.Button();
             this.buyBtn = new System.Windows.Forms.Button();
             this.removeBtn = new System.Windows.Forms.Button();
             this.backBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.ChangeLastNameTB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.priceMinBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceMaxBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carMileage)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // makeTxtBox
@@ -112,6 +111,7 @@ namespace WindowsFormsApp3
             this.carMileage.Name = "carMileage";
             this.carMileage.Size = new System.Drawing.Size(83, 20);
             this.carMileage.TabIndex = 6;
+            this.carMileage.ValueChanged += new System.EventHandler(this.carMileage_ValueChanged);
             // 
             // label1
             // 
@@ -176,15 +176,6 @@ namespace WindowsFormsApp3
             this.label7.TabIndex = 13;
             this.label7.Text = "Car Mileage (Max)";
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(16, 247);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(328, 181);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // purchasehistoryBtn
             // 
             this.purchasehistoryBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -216,6 +207,7 @@ namespace WindowsFormsApp3
             this.favouriteBtn.TabIndex = 17;
             this.favouriteBtn.Text = "Favourite";
             this.favouriteBtn.UseVisualStyleBackColor = true;
+            this.favouriteBtn.Click += new System.EventHandler(this.favouriteBtn_Click);
             // 
             // buyBtn
             // 
@@ -248,66 +240,58 @@ namespace WindowsFormsApp3
             this.backBtn.UseVisualStyleBackColor = true;
             this.backBtn.Click += new System.EventHandler(this.button6_Click);
             // 
-            // textBox1
+            // ChangeLastNameTB
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 104);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(135, 20);
-            this.textBox1.TabIndex = 21;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(16, 145);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(135, 20);
-            this.textBox2.TabIndex = 22;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.ChangeLastNameTB.Location = new System.Drawing.Point(16, 89);
+            this.ChangeLastNameTB.Name = "ChangeLastNameTB";
+            this.ChangeLastNameTB.Size = new System.Drawing.Size(135, 20);
+            this.ChangeLastNameTB.TabIndex = 22;
+            this.ChangeLastNameTB.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(54, 129);
+            this.label8.Location = new System.Drawing.Point(39, 73);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.Size = new System.Drawing.Size(98, 13);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Last Name";
+            this.label8.Text = "Change Last Name";
             this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(54, 88);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 13);
-            this.label9.TabIndex = 24;
-            this.label9.Text = "First Name";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(157, 102);
+            this.button1.Location = new System.Drawing.Point(27, 115);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(99, 63);
             this.button1.TabIndex = 25;
             this.button1.Text = "Submit";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 230);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(331, 203);
+            this.dataGridView1.TabIndex = 26;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // CustomerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.ChangeLastNameTB);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.removeBtn);
             this.Controls.Add(this.buyBtn);
             this.Controls.Add(this.favouriteBtn);
             this.Controls.Add(this.searchBtn);
             this.Controls.Add(this.purchasehistoryBtn);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -327,6 +311,7 @@ namespace WindowsFormsApp3
             ((System.ComponentModel.ISupportInitialize)(this.priceMinBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceMaxBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carMileage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -348,17 +333,15 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button purchasehistoryBtn;
         private System.Windows.Forms.Button searchBtn;
         private System.Windows.Forms.Button favouriteBtn;
         private System.Windows.Forms.Button buyBtn;
         private System.Windows.Forms.Button removeBtn;
         private System.Windows.Forms.Button backBtn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox ChangeLastNameTB;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

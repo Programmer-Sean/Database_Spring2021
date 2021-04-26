@@ -34,3 +34,4 @@ C:\Users\Maste\Documents\GitHub\Database_Spring2021\WindowsFormsApp\WindowsForms
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesPersonAddLot.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesLogin.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesPerons_CarTools.resources
+C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Customer_Login.resources

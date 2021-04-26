@@ -46,19 +46,11 @@ namespace WindowsFormsApp3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //new SalesPersonMain().Show();
-           // this.Hide();
-
-            /*
-             Check if the login information is correct
-            
-             */
-
-            //Check if new user is selected or not, BOOL 
-
             string LoginExists = "";
 
             String EnPW = "";
+
+            string usedUserName = "FALSE";
 
             if (newUser)
             {
@@ -68,11 +60,22 @@ namespace WindowsFormsApp3
 
                 //New Encrypted sql commands
 
-                EnPW = Encrypt.EncryptString(PasswordTB.Text, "Password");
 
+
+                //Error Checking for empty Text boxes
+                if (UserNameTB.Text == "") return;
+
+                //Error check for already taken username
+                cmd = new SqlCommand("SELECT CASE WHEN EXISTS   ( SELECT * FROM SalesPersonID WHERE ([Username] = '" + UserNameTB.Text + "')) THEN 'TRUE'  ELSE 'FALSE' END", con);
+                usedUserName = (string)cmd.ExecuteScalar();
+
+
+                EnPW = Encrypt.EncryptString(PasswordTB.Text, "Password");
                 cmd = new SqlCommand("insert into SalesPersonID([First Name],[Last Name],UserName,Password) values ('" + FirstNameTB.Text + "','" + LastNameTB.Text + "','" + UserNameTB.Text + "','" + EnPW + "')", con);
                 cmd.ExecuteNonQuery();
                 con.Close();
+
+                
             }
 
 
@@ -80,7 +83,7 @@ namespace WindowsFormsApp3
             EnPW = Encrypt.EncryptString(PasswordTB.Text, "Password");
             con = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             con.Open();
-            //cmd = new SqlCommand("SELECT CASE WHEN EXISTS   ( SELECT * FROM SalesPersonID WHERE ([First Name] = 'Sean') AND ([Last Name] = 'Sean')  ) THEN 'TRUE'  ELSE 'FALSE' END", con);
+
             cmd = new SqlCommand("SELECT CASE WHEN EXISTS   ( SELECT * FROM SalesPersonID WHERE ([Username] = '"+UserNameTB.Text+"') AND ([Password] = '"+ EnPW +"')  ) THEN 'TRUE'  ELSE 'FALSE' END", con);
 
             //Holds True/false if statement is in the table
@@ -88,11 +91,8 @@ namespace WindowsFormsApp3
 
             con.Close();
 
-            //label1.Text = Encrypt.EncryptString(PasswordTB.Text, "Password");
-            //label2.Text = Encrypt.DecryptString(label1.Text, "Password");
 
-
-            if (LoginExists.Equals("TRUE"))
+            if (LoginExists.Equals("TRUE") && usedUserName.Equals("FALSE"))
             {
                 new SalesPersonMain().Show();
                 this.Hide();
@@ -102,7 +102,6 @@ namespace WindowsFormsApp3
         private void button2_Click(object sender, EventArgs e)
         {
             new MainMenu().Show();
-
             this.Hide();
         }
 
@@ -123,6 +122,41 @@ namespace WindowsFormsApp3
         }
 
         private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserNameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PasswordTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FirstNameTB_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LastNameTB_TextChanged(object sender, EventArgs e)
         {
 
         }

@@ -8,6 +8,10 @@ namespace WindowsFormsApp3
 {
     static class Program
     {
+
+
+        public static string CurCustomer = "";
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
