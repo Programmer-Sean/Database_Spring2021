@@ -35,3 +35,4 @@ C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\W
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesLogin.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.SalesPerons_CarTools.resources
 C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Customer_Login.resources
+C:\Users\sean_\Desktop\Database_Spring2021\Database_Spring2021\WindowsFormsApp\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FavoriteList.resources

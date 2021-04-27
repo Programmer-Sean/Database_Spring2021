@@ -53,6 +53,8 @@ namespace WindowsFormsApp3
             this.label8 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.priceMinBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceMaxBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carMileage)).BeginInit();
@@ -78,6 +80,11 @@ namespace WindowsFormsApp3
             // priceMinBox
             // 
             this.priceMinBox.Location = new System.Drawing.Point(284, 32);
+            this.priceMinBox.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.priceMinBox.Name = "priceMinBox";
             this.priceMinBox.Size = new System.Drawing.Size(78, 20);
             this.priceMinBox.TabIndex = 2;
@@ -85,6 +92,11 @@ namespace WindowsFormsApp3
             // priceMaxBox
             // 
             this.priceMaxBox.Location = new System.Drawing.Point(383, 32);
+            this.priceMaxBox.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.priceMaxBox.Name = "priceMaxBox";
             this.priceMaxBox.Size = new System.Drawing.Size(80, 20);
             this.priceMaxBox.TabIndex = 3;
@@ -108,6 +120,11 @@ namespace WindowsFormsApp3
             // carMileage
             // 
             this.carMileage.Location = new System.Drawing.Point(705, 31);
+            this.carMileage.Maximum = new decimal(new int[] {
+            1000000,
+            0,
+            0,
+            0});
             this.carMileage.Name = "carMileage";
             this.carMileage.Size = new System.Drawing.Size(83, 20);
             this.carMileage.TabIndex = 6;
@@ -277,11 +294,32 @@ namespace WindowsFormsApp3
             this.dataGridView1.TabIndex = 26;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(116, 207);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(35, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "label9";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(443, 411);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(307, 27);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Favorite List";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
             // CustomerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
@@ -308,6 +346,7 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.makeTxtBox);
             this.Name = "CustomerMain";
             this.Text = "Form6";
+            this.Load += new System.EventHandler(this.CustomerMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.priceMinBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceMaxBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.carMileage)).EndInit();
@@ -343,5 +382,7 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button2;
     }
 }

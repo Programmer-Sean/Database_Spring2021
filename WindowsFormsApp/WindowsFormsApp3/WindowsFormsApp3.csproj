@@ -52,6 +52,12 @@
     <Compile Include="Customer-Login.Designer.cs">
       <DependentUpon>Customer-Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Customer-FavoriteList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer-FavoriteList.Designer.cs">
+      <DependentUpon>Customer-FavoriteList.cs</DependentUpon>
+    </Compile>
     <Compile Include="SalesPerons-CarTools.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +122,9 @@
     </Compile>
     <EmbeddedResource Include="Customer-Login.resx">
       <DependentUpon>Customer-Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer-FavoriteList.resx">
+      <DependentUpon>Customer-FavoriteList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SalesPerons-CarTools.resx">
       <DependentUpon>SalesPerons-CarTools.cs</DependentUpon>

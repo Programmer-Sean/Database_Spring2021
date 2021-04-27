@@ -87,9 +87,9 @@ namespace WindowsFormsApp3
 
         private void button3_Click(object sender, EventArgs e)
         {
-            UserName = UserNameTB.Text;
-            new CustomerMain().Show();
-            this.Hide();
+            //UserName = UserNameTB.Text;
+            //new CustomerMain().Show();
+            //this.Hide();
             string LoginExists = "";
 
             String EnPW = "";
