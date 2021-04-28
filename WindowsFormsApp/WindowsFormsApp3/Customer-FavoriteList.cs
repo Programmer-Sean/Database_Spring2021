@@ -45,6 +45,19 @@ namespace WindowsFormsApp3
             }
 
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+
+            string Sql = "SELECT SalesPersonID.[Username] FROM SalesPersonID";
+            SqlConnection conn = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            conn.Open();
+            cmd = new SqlCommand(Sql, conn);
+            SqlDataReader DR = cmd.ExecuteReader();
+
+            while (DR.Read())
+            {
+                comboBox1.Items.Add(DR[0]);
+            }
+
+
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
@@ -120,8 +133,8 @@ namespace WindowsFormsApp3
                 int tempPrice = (int)cmd.ExecuteScalar();
 
                 //get Sales Person ID
-
-                int tempsSalesPersonID = 0;
+                cmd = new SqlCommand("SELECT [Sales Person ID] FROM SalesPersonID WHERE ([Username] = '" + comboBox1.Text + "')", con);
+                int tempsSalesPersonID = (int)cmd.ExecuteScalar();
 
                 //cmd = new SqlCommand("insert into PotentialSaleID([Customer ID],[Car ID]) values(" + ID + "," + curCarID + ");", con);
 
@@ -133,6 +146,16 @@ namespace WindowsFormsApp3
                 //remove car from ALL potential sales
                 cmd = new SqlCommand("DELETE FROM PotentialSaleID WHERE [Car ID] = " + tempCarID + "", con);
                 cmd.ExecuteNonQuery();
+
+                //Remove CarID From LotCarID
+                cmd = new SqlCommand("DELETE FROM LotCarID WHERE [Car ID] = " + tempCarID + "", con);
+                cmd.ExecuteNonQuery();
+
+                //Remove CarID From CarID
+                //cmd = new SqlCommand("DELETE FROM CarID WHERE [Car ID] = " + tempCarID + "", con);
+                //cmd.ExecuteNonQuery();
+
+                refreshTable();
             }
         }
 
@@ -153,6 +176,16 @@ namespace WindowsFormsApp3
                 dataGridView1.DataSource = dtbl;
                 SqlCon.Close();
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

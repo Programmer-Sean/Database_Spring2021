@@ -36,6 +36,7 @@ namespace WindowsFormsApp3
             }
 
 
+           this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
 
 
 
@@ -230,11 +231,44 @@ namespace WindowsFormsApp3
             sqlDa.Fill(dtbl);
 
             dataGridView1.DataSource = dtbl;
+            con.Close();
         }
 
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        string curCarID;
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int rowInbdex = e.RowIndex;
+
+
+            if (e.RowIndex > -1 && e.ColumnIndex > -1)
+            {
+                DataGridViewRow row = dataGridView1.CurrentCell.OwningRow;
+                string value = row.Cells["Car ID"].Value.ToString();
+                curCarID = value;
+                label1.Text = curCarID;
+            }
+        }
+
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
+            if (curCarID != "")
+            {
+                con = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+                con.Open();
+                cmd = new SqlCommand("DELETE FROM CarID WHERE [Car ID] = " + curCarID + "", con);
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
     }
 }

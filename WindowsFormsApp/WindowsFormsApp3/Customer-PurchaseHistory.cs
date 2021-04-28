@@ -18,6 +18,10 @@ namespace WindowsFormsApp3
 {
     public partial class Form7 : Form
     {
+        SqlCommand cmd;
+        SqlConnection con;
+        SqlDataAdapter da;
+
         public Form7()
         {
             InitializeComponent();
@@ -29,13 +33,24 @@ namespace WindowsFormsApp3
                 cmd = new SqlCommand("SELECT * FROM CustomerID WHERE ([Username] = '" + Customer_Login.UserName + "')", SqlCon);
                 int ID = (int)cmd.ExecuteScalar();
                 //End
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM PotentialSaleID WHERE [Customer ID] = " + ID + "", SqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM SoldID WHERE [Customer ID] = " + ID + "", SqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
                 dataGridView1.DataSource = dtbl;
                 SqlCon.Close();
             }
+
+
+            SqlConnection SqlCon2 = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            SqlCon2.Open();
+            cmd = new SqlCommand("SELECT SUM([Sold Price]) FROM SoldID; ", SqlCon2);
+            int ID2 = (int)cmd.ExecuteScalar();
+            SqlCon2.Close();
+
+            label1.Text = ID2+"";
+
+
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
