@@ -155,6 +155,12 @@ namespace WindowsFormsApp3
                 //cmd = new SqlCommand("DELETE FROM CarID WHERE [Car ID] = " + tempCarID + "", con);
                 //cmd.ExecuteNonQuery();
 
+
+                cmd = new SqlCommand("UPDATE CarID SET Price = 0 WHERE[Car ID] = '"+tempCarID+"'; ", con);
+                cmd.ExecuteNonQuery();
+
+                
+
                 refreshTable();
             }
         }

@@ -93,5 +93,18 @@ namespace WindowsFormsApp3
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+
+ 
+            con = new SqlConnection(@"Data Source=DESKTOP-U6DDQFE\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            con.Open();
+            string temp = @"C:\Users\sean_\Desktop\XMLspring\Games.xml";
+            cmd = new SqlCommand("DECLARE @x xml SELECT @x = G FROM OPENROWSET(BULK '"+temp+ "', SINGLE_BLOB) AS Games(G) DECLARE @hdoc int EXEC sp_xml_preparedocument @hdoc OUTPUT, @x SELECT * INTO mmCars FROM OPENXML(@hdoc, '/CATALOG/MAKEMODEL', 2)  WITH( Make VARCHAR(50), Model VARCHAR(50)) EXEC sp_xml_removedocument @hdoc insert into MakeModelID select * from mmCars drop TABLE mmCars", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

@@ -25,15 +25,16 @@ namespace WindowsFormsApp3
         public Form7()
         {
             InitializeComponent();
+            int ID = 0;
             using (SqlConnection SqlCon = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True"))
             {
                 SqlCon.Open();
 
                 //Get
                 cmd = new SqlCommand("SELECT * FROM CustomerID WHERE ([Username] = '" + Customer_Login.UserName + "')", SqlCon);
-                int ID = (int)cmd.ExecuteScalar();
+                ID = (int)cmd.ExecuteScalar();
                 //End
-                SqlDataAdapter sqlDa = new SqlDataAdapter("Select * FROM SoldID WHERE [Customer ID] = " + ID + "", SqlCon);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT SoldID.[Sold ID], CustomerID.[First Name], CustomerID.[Last Name], MakeModelID.Make, MakeModelID.Model, CarID.Price, SalesPersonID.[Sales Person ID] FROM SoldID inner JOIN CustomerID on SoldID.[Customer ID] = CustomerID.[Customer ID] inner JOIN CarID on CarID.[Car ID] = SoldID.[Car ID] inner JOIN MakeModelID on MakeModelID.[Make Model ID] = CarID.[Make Model ID] inner JOIN SalesPersonID on SoldID.[Sales Person ID] = SalesPersonID.[Sales Person ID] where CustomerID.[First Name] = '"+Customer_Login.UserName+"'", SqlCon);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
@@ -44,7 +45,7 @@ namespace WindowsFormsApp3
 
             SqlConnection SqlCon2 = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
             SqlCon2.Open();
-            cmd = new SqlCommand("SELECT SUM([Sold Price]) FROM SoldID; ", SqlCon2);
+            cmd = new SqlCommand("SELECT SUM([Sold Price]) FROM SoldID where SoldID.[Customer ID] = '"+ID+"'; ", SqlCon2);
             int ID2 = (int)cmd.ExecuteScalar();
             SqlCon2.Close();
 
@@ -65,6 +66,11 @@ namespace WindowsFormsApp3
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

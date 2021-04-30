@@ -56,6 +56,7 @@ namespace WindowsFormsApp3
             this.label1.Size = new System.Drawing.Size(44, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "12";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // dataGridView1
             // 

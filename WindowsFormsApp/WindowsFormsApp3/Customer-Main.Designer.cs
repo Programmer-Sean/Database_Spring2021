@@ -55,6 +55,7 @@ namespace WindowsFormsApp3
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.priceMinBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.priceMaxBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.carMileage)).BeginInit();
@@ -300,11 +301,22 @@ namespace WindowsFormsApp3
             this.chart1.Text = "chart1";
             this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(350, 411);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(87, 50);
+            this.button3.TabIndex = 30;
+            this.button3.Text = "Show Table";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // CustomerMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 814);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.chart1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.dataGridView1);
@@ -368,5 +380,6 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button button3;
     }
 }

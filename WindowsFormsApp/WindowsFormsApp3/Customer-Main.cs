@@ -30,7 +30,7 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
 
-
+            chart1.Hide();
 
 
             //label1.Text = Customer_Login.UserName;
@@ -95,7 +95,7 @@ namespace WindowsFormsApp3
                 pointsArray.Add((int)cmd.ExecuteScalar());
 
             }
-            label1.Text = pointsArray[0].ToString();
+            //label1.Text = pointsArray[0].ToString();
             for (int i = 0; i < count; i++)
             {
                 Series colors = this.chart1.Series.Add(seriesArray[i]);
@@ -134,8 +134,9 @@ namespace WindowsFormsApp3
                 con.Open();
                 cmd = new SqlCommand("SELECT * FROM CarID", con);
                 //Working one
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM CarID WHERE[Make Model ID] = " + "[Make Model ID]" + " AND [Color ID] = " + "[Color ID]" + " AND Mileage = " + tempMile + " AND Price = " + tempPrice + "", con);
-
+                //SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM CarID WHERE[Make Model ID] = " + "[Make Model ID]" + " AND [Color ID] = " + "[Color ID]" + " AND Mileage = " + tempMile + " AND Price = " + tempPrice + "", con);
+                
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM CarID WHERE[Make Model ID]=[Make Model ID] and [Color ID]=[Color ID] and Mileage=Mileage and (Price = Price AND Price!=0)", con);
 
 
                 //SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM CarID,LotCarID WHERE[Make Model ID] = " + "[Make Model ID]" + " AND [Color ID] = " + "[Color ID]" + " AND Mileage = " + tempMile + " AND Price = " + tempPrice + " AND CarID.[Car ID] = LotCarID.[Car ID]", con);
@@ -200,8 +201,9 @@ namespace WindowsFormsApp3
                     con.Open();
                     while (i <= numofIDs)
                     {
-                        cmd.CommandText = "SELECT* FROM CarID WHERE[Make Model ID] = " + MakeModelIDsList[i] + " AND[Color ID] = " + tempColorID + " AND(Mileage <= " + carMileage.Value + ") AND(Price BETWEEN " + priceMinBox.Value + " AND " + priceMaxBox.Value + ")";
-
+                        // Working one
+                        //cmd.CommandText = "SELECT* FROM CarID WHERE[Make Model ID] = " + MakeModelIDsList[i] + " AND[Color ID] = " + tempColorID + " AND(Mileage <= " + carMileage.Value + ") AND(Price BETWEEN " + priceMinBox.Value + " AND " + priceMaxBox.Value + ")";
+                        cmd.CommandText = "SELECT * FROM CarID WHERE[Make Model ID] = " + MakeModelIDsList[i] + " AND[Color ID] = " + tempColorID + " AND(Mileage <= " + carMileage.Value + ") AND(Price BETWEEN " + priceMinBox.Value + " AND " + priceMaxBox.Value + " AND Price!=0)";
 
                         SqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())
@@ -264,7 +266,8 @@ namespace WindowsFormsApp3
                 }
                 cmd = new SqlCommand("SELECT * FROM CarID", con);
 
-                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM CarID WHERE[Make Model ID] = " + tempMakeModelID + " AND [Color ID] = " + tempColorID + " AND (Mileage <= " + carMileage.Value + ") AND (Price BETWEEN " + priceMinBox.Value + " AND " + priceMaxBox.Value + ")", con);
+                //SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM CarID WHERE[Make Model ID] = " + tempMakeModelID + " AND [Color ID] = " + tempColorID + " AND (Mileage <= " + carMileage.Value + ") AND (Price BETWEEN " + priceMinBox.Value + " AND " + priceMaxBox.Value + ")", con);
+                SqlDataAdapter sqlDa = new SqlDataAdapter("SELECT * FROM CarID WHERE[Make Model ID] = " + tempMakeModelID + " AND [Color ID] = " + tempColorID + " AND (Mileage <= " + carMileage.Value + ") AND (Price BETWEEN " + priceMinBox.Value + " AND " + priceMaxBox.Value + " AND Price!=0)", con);
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
                 dataGridView1.DataSource = dtbl;
@@ -438,6 +441,41 @@ namespace WindowsFormsApp3
         private void chart1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            chart1.Show();
+            SqlConnection conn = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=Car Dealership;Integrated Security=True");
+            conn.Open();
+            chart1.Series.Clear();
+           
+            int count = 0;
+            List<string> seriesArray = new List<string>();
+            List<int> pointsArray = new List<int>();
+
+            cmd = new SqlCommand("SELECT[Color] FROM ColorID", conn);
+            SqlDataReader DR = cmd.ExecuteReader();
+
+            while (DR.Read())
+            {
+                seriesArray.Add(DR[0].ToString());
+                count++;
+            }
+            DR.Close();
+            for (int p = 1; p <= count; p++)
+            {
+                cmd = new SqlCommand("SELECT Count ([Color ID]) From CarID WHERE [Color ID]=" + p + ";", conn);
+                pointsArray.Add((int)cmd.ExecuteScalar());
+
+            }
+            //label1.Text = pointsArray[0].ToString();
+            for (int i = 0; i < count; i++)
+            {
+                Series colors = this.chart1.Series.Add(seriesArray[i]);
+                colors.Points.Add(pointsArray[i]);
+            }
+            conn.Close();
         }
     }
 }
